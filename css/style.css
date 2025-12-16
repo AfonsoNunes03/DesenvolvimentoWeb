@@ -1,0 +1,37 @@
+:root {
+    --primary: #0084ff;
+    --dark: #222;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; }
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+.btn:hover { opacity: 0.9; }
+
+
+
+/* Tabela e Modal */
+.schedule-table th { background-color: var(--dark); color: white; padding: 15px; }
+.schedule-table td { border: 1px solid #eee; padding: 10px; transition: 0.2s; }
+.schedule-table td.class-trigger:hover { background-color: #f0f9ff; cursor: pointer; }
+
+#booking-modal { transition: opacity 0.3s ease; }
+.backdrop-blur-sm { backdrop-filter: blur(4px); }
+
+/* Ajustes de layout para o blog e serviços */
+.blog-grid, .contact-grid { display: grid; gap: 2rem; }
+@media(min-width: 768px) {
+    .blog-grid { grid-template-columns: repeat(3, 1fr); }
+    .contact-grid { grid-template-columns: 2fr 1fr; }
+}
+.blog-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 0.5rem; }
